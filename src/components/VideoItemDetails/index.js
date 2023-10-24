@@ -208,9 +208,9 @@ class VideoItemDetails extends Component {
     return (
       <ThemeContext.Consumer>
         {value => {
-          const {isDarkTheme, isBannerVisible, savedList} = value
-          const {videoData, videoApiStatus} = this.state
-          const timeAgo = formatDistanceToNow(new Date(videoData.publishedAt))
+          const {isDarkTheme} = value
+          const {videoApiStatus} = this.state
+
           let content = null
           switch (videoApiStatus) {
             case videoApiStatusConstants.inProgress:
@@ -231,7 +231,7 @@ class VideoItemDetails extends Component {
           return (
             <>
               <Header />
-              <VideoDetailsPageContainer>
+              <VideoDetailsPageContainer isDarkModeOn={isDarkTheme}>
                 <Sidebar />
                 {content}
               </VideoDetailsPageContainer>

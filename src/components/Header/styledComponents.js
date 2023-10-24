@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const HeaderContainer = styled.div`
+  background-color: ${props => (props.isInDarkMode ? '#0f0f0f' : '#f8fafc')};
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -15,6 +16,7 @@ export const ProfileContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+  background-color: ${props => (props.isInDarkMode ? '#0f0f0f' : '#f8fafc')};
 `
 export const ThemeIconButtonDark = styled.button`
   height: 30px;
@@ -28,6 +30,8 @@ export const ThemeIconButtonLight = styled.button`
 export const ProfileImage = styled.img`
   height: 30px;
   width: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
 `
 export const LightLogoutButton = styled.button`
   height: 30px;
@@ -35,6 +39,7 @@ export const LightLogoutButton = styled.button`
   border-color: #3b82f6;
   border-style: solid;
   border-radius: 5px;
+  background-color: transparent;
 `
 export const DarkLogoutButton = styled.button`
   height: 30px;
@@ -42,6 +47,7 @@ export const DarkLogoutButton = styled.button`
   border-color: #f1f1f1;
   border-style: solid;
   border-radius: 5px;
+  background-color: transparent;
 `
 export const PopupContainer = styled.div`
   height: 100px;

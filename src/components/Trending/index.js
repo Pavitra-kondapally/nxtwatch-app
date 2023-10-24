@@ -53,6 +53,7 @@ class Trending extends Component {
     const response = await fetch(trendingApiUrl, options)
     if (response.ok === true) {
       const fetchedData = await response.json()
+      console.log(fetchedData)
 
       const updatedTrendingData = fetchedData.videos.map(each => ({
         id: each.id,
@@ -67,6 +68,7 @@ class Trending extends Component {
         trendingApiStatus: trendingApiStatusConstants.inProgress,
       })
     } else {
+      console.log('error')
       this.setState({trendingApiStatus: trendingApiStatusConstants.failure})
     }
   }

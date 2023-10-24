@@ -111,15 +111,16 @@ class LoginPage extends Component {
               placeholder="Password"
             />
           )}
-
-          <CheckBoxInput
-            type="checkbox"
-            id="checkbox"
-            onChange={this.onChangingCheckbox}
-          />
-          <CheckBoxLabelStyle htmlFor="checkbox">
-            Show Password
-          </CheckBoxLabelStyle>
+          <div>
+            <CheckBoxInput
+              type="checkbox"
+              id="checkbox"
+              onChange={this.onChangingCheckbox}
+            />
+            <CheckBoxLabelStyle htmlFor="checkbox">
+              Show Password
+            </CheckBoxLabelStyle>
+          </div>
           <LoginButton type="submit">Login</LoginButton>
           {showSubmitError && <ErrorMsg>{errorMsg}</ErrorMsg>}
         </LoginFormContainer>

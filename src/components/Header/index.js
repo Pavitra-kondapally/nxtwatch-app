@@ -43,7 +43,7 @@ const Header = props => (
       }
 
       return (
-        <HeaderContainer>
+        <HeaderContainer isDarkModeOn={isDarkTheme}>
           {isDarkTheme ? (
             <HeaderLogoImage
               src="https://assets.ccbp.in/frontend/react-js/nxt-watch-logo-dark-theme-img.png"
@@ -55,7 +55,7 @@ const Header = props => (
               onClick={onClickingHome}
             />
           )}
-          <ProfileContainer>
+          <ProfileContainer isDarkModeOn={isDarkTheme}>
             {isDarkTheme ? (
               <ThemeIconButtonDark
                 type="button"

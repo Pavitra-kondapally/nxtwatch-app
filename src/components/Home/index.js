@@ -144,7 +144,7 @@ class Home extends Component {
   renderSuccessView = () => {
     const {videosList, searchInput} = this.state
     const filteredList = videosList.filter(each =>
-      each.title.includes(searchInput),
+      each.title.toLowerCase().includes(searchInput.toLowerCase()),
     )
 
     if (filteredList.length === 0) {
@@ -183,8 +183,8 @@ class Home extends Component {
           }
           return (
             <>
-              <Header />
-              <HomeContainer>
+              <Header isDarkModeOn={isDarkTheme} />
+              <HomeContainer isDarkModeOn={isDarkTheme}>
                 <Sidebar />
                 <RightHomeBar isDarkModeOn={isDarkTheme}>
                   {isBannerVisible ? <Banner /> : null}

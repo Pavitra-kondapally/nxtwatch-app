@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import {Link} from 'react-router-dom'
 
 export const SidebarContainer = styled.div`
   background-color: ${props => (props.isInDarkMode ? '#0f0f0f' : '#f8fafc')};
@@ -6,8 +7,8 @@ export const SidebarContainer = styled.div`
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  width: 30vw;
-  height: 70vh;
+  width: 40vw;
+  height: 90vh;
 `
 export const SidebarList = styled.ul`
   list-style: none;
@@ -17,10 +18,12 @@ export const ListItem = styled.li`
   display: flex;
   flex-direction: row;
 `
-export const SidebarLink = styled.Link`
+export const SidebarLink = styled(Link)`
+  text-decoration: none;
   &:hover {
     color: red;
     background-color: #909090;
+    text-decoration: underline;
   }
 `
 export const FooterContainer = styled.div`
@@ -40,4 +43,5 @@ export const IconContainer = styled.div`
 export const IconImage = styled.img`
   height: 20px;
   width: 20px;
+  margin: 10px;
 `

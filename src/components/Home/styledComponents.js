@@ -4,6 +4,7 @@ export const HomeContainer = styled.div`
   padding: 10px;
   display: flex;
   flex-direction: row;
+  background-color: ${props => (props.isInDarkMode ? '#0f0f0f' : '#f8fafc')};
 `
 export const RightHomeBar = styled.div`
   display: flex;
@@ -15,8 +16,9 @@ export const VideosContainer = styled.div`
 `
 export const SearchBox = styled.input`
   height: 30px;
-  width: 70px;
+  width: 150px;
   border-color: #383838;
+  margin-bottom: 10px;
 `
 export const SearchContainer = styled.div`
   display: flex;

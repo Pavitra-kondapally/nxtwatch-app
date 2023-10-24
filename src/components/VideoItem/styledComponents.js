@@ -1,12 +1,13 @@
 import styled from 'styled-components'
 
 export const VideoItemContainer = styled.div`
-  height: 200px;
-  width: 150px;
+  height: 400px;
+  width: 300px;
+  margin: 10px;
 `
 export const VideoThumbnail = styled.img`
   height: 100px;
-  width: 150px;
+  width: 200px;
 `
 export const VideoInfoContainer = styled.div`
   display: flex;

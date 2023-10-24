@@ -9,8 +9,8 @@ export const AppLoginContainer = styled.div`
 export const LoginFormContainer = styled.form`
   box-shadow: #bfbfbf;
   background-color: #f8fafc;
-  height: 250px;
-  width: 200px;
+  height: 400px;
+  width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: center;
